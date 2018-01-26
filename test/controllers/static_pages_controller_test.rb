@@ -8,12 +8,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get homepage" do
     get root_url
     assert_response :success
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get home" do
     get static_pages_home_url #tells test to get the url for the home page
     assert_response :success # tells it too expect a 200 ok in response
-    assert_select "title", "Home | #{@base_title}" # expect the text in the <title> tag to read as in the example
+    assert_select "title", "Ruby on Rails Tutorial Sample App"
   end
 
   test "should get help" do
