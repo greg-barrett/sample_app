@@ -1,7 +1,10 @@
+<!––  this file is the main 'view' used on all pages
+#the actual views we access with our urls are passed into the yeild in the body
+#the yield in the title comes from the view also.-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
